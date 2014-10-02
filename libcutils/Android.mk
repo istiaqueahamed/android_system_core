@@ -166,3 +166,7 @@ LOCAL_SRC_FILES := str_parms.c hashmap.c memory.c
 LOCAL_SHARED_LIBRARIES := liblog
 LOCAL_MODULE_TAGS := optional
 include $(BUILD_EXECUTABLE)
+
+ifeq ($(BOARD_HAVE_MTK_HARDWARE), true)
+LOCAL_SRC_FILES += MediatekHacks.cpp
+endif
