@@ -167,3 +167,7 @@ LOCAL_MODULE_TAGS := optional
 include $(BUILD_EXECUTABLE)
 
 include $(call all-makefiles-under,$(LOCAL_PATH))
+
+ifeq ($(BOARD_HAVE_MTK_HARDWARE), true)
+LOCAL_SRC_FILES += MediatekHacks.cpp
+endif
