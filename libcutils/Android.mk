@@ -168,5 +168,7 @@ LOCAL_MODULE_TAGS := optional
 include $(BUILD_EXECUTABLE)
 
 ifeq ($(BOARD_HAVE_MTK_HARDWARE), true)
-LOCAL_SRC_FILES += MediatekHacks.cpp
+LOCAL_SRC_FILES += \
+    MediatekHacks.cpp \
+    pmem-dev.cpp
 endif
